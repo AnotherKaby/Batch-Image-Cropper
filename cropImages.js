@@ -41,7 +41,7 @@ fs.readdir(inputFolder, (err, files) => {
       const topCrop = 44; //dalam pixel
       const bottomCrop = 44; //dalam pixel
 
-      const croppedImage = image.crop(leftCrop, topCrop, rightCrop - leftCrop, image.bitmap.height - topCrop - bottomCrop); // Crop bagian kiri, kanan, atas, dan bawah
+      const croppedImage = image.crop(leftCrop, topCrop, image.bitmap.width - rightCrop - leftCrop, image.bitmap.height - topCrop - bottomCrop); // Crop bagian kiri, kanan, atas, dan bawah
 
       // Simpan hasil crop
       const outputPath = path.join(outputFolder, file);
